@@ -12,7 +12,7 @@ app.use(express.json());
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.CORS_ORIGIN || '*',
+    origin: ['https://bottle-game-client.vercel.app', 'http://localhost:3000'],
     methods: ['GET', 'POST']
   }
 });
